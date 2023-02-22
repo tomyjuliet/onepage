@@ -1,0 +1,325 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{scroll-behavior: smooth;}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+
+/* Top Button */
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.top a{
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../image/top.png) no-repeat;
+  transition: 0.35s;
+}
+.top a:hover{background-image: url(../image/top_on.png);}
+
+
+/* Header___________________ */
+header{
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+}
+nav{
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+  display: flex; /* 로고랑메뉴 둘다 가로배치위해서 */
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb{display: flex;}
+.gnb li{margin: 0 15px;}
+.gnb li a{
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.gnb li a:hover{color: orange;}
+
+/* Main_____________________ */
+main{
+  width: 100%;
+  height: 600px;
+  background: url(../image/main.png) no-repeat center bottom fixed;
+  background-size: cover;
+}
+.caption{
+  height: inherit;
+  display: flex;
+  flex-direction: column; /* 가로배치인거 내리기위해 */
+  justify-content: center;
+  align-items: center;
+}
+.caption h1{
+  font-family: "century Gothic", arial;
+  color: goldenrod;
+  font-size: 70px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+.caption strong{
+  color: #ddd;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+
+/* Section__________________ */
+section{
+  width: 100%;
+  text-align: center;
+}
+section h2{
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+section h3{
+  font-weight: 400;
+  font-size: 18px;
+  margin: 10px 0;
+  color: #777;
+}
+section>div{margin-top: 70px;} 
+
+
+
+/* About */
+.ab_num{
+  width: 100%;
+  height: 250px;
+  background-color: #eee;
+  margin-top: 30px;
+}
+.ab_num ul{
+  width: 1200px;
+  margin: auto;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ab_num ul li span:nth-child(1){ /* icon font */
+  font-size: 60px;
+  color: #555;
+  vertical-align: top; /* 아이콘위치맞추기 */
+  transform: translateY(-5px);
+}
+.ab_num ul li span:nth-child(2){
+  font-size: 42px;
+  color: #555;
+  font-weight: 500;
+  padding-left: 15px;
+}
+.ab_num ul li span:nth-child(3){
+  display: block;
+  font-size: 20px;
+  color: #666;
+  padding-left: 60px;
+}
+
+
+/* Our skill */
+.stick{
+  width: 1200px;
+  margin: 80px auto 0;
+  overflow: hidden; /* float 오류 해결 */
+}
+.stick div{
+  float: left;
+  width: 48%;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 30px;
+  overflow: hidden; 
+}
+.stick div:nth-child(2){float: right;}
+.stick div p.bar1{
+  width: 85%;
+  height: 100%;
+  background-color: royalblue;
+}
+.stick div p.bar2{
+  width: 75%;
+  height: 100%;
+  background-color: yellowgreen;
+}
+.stick div p span{
+  display: block;
+  color: #fff;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+
+/* Our service */
+.service_img{
+  width: 1200px;
+  margin: 80px auto 0;
+}
+.service_img ul{
+  display: flex;
+  justify-content: space-between;
+}
+.service_img ul li{
+  width: 280px;
+  height: 280px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Our portfolio */
+#portfolio{
+  width: 100%;
+  height: 1000px;
+  background-color: #ccc;
+  padding-top: 70px;
+}
+.tabmenu{
+  /* border: 1px solid red; */
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+}
+.tabmenu ul{
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tabmenu ul li:first-child{
+  border-bottom: 2px solid #09f;
+  padding: 0 30px;
+}
+.tabmenu ul li a{
+  color: #000;
+  text-transform: capitalize;
+}
+
+.tabimg{
+  /* border: 1px solid red; */
+  width: 1200px;
+  margin: auto;
+}
+.tabimg ul{overflow: hidden;} /* float문제해결 */
+.tabimg ul li{
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.tabimg ul li:last-child,
+.tabimg ul li:nth-child(4){
+  margin-right: 0;
+}
+
+
+/* Our team */
+.team_img{
+  width: 1200px;
+  height: 450px;
+  margin: auto;
+}
+.team_img ul{
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team_img h4{
+  color: orange;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+
+/* Our blog */
+#blog{
+  height: 800px;
+  background-color: aliceblue;
+  padding-top: 70px;
+}
+.blog_img{
+  width: 1200px;
+  height: 500px;
+  margin: 60px auto 0;
+}
+.blog_img ul{
+  width: inherit;
+  display: flex;
+  justify-content: center;
+}
+.btitle{
+  /* background-color: pink; */
+  width: 80%;
+  margin: auto;
+}
+.btitle h5{
+  color: royalblue;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 15px 0;
+}
+.btitle p{text-align: left;}
+.btitle a{
+  display: block;
+  margin-top: 50px;
+  text-align: left;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Button */
+.btn{
+  display: block;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  margin: 70px auto 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.btn:hover{
+  border-color: #09f;
+  color: #09f;
+}
+
+/* Footer___________________ */
+footer{
+  width: 100%;
+  height: 120px;
+  background-color: #ddd;
+  text-align: center;
+  padding-top: 50px;
+  color: #666;
+}
+address{
+  font-style: normal;
+  margin-top: 20px;
+  color: #000;
+}
+address strong{color: crimson;}
+
