@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모바일</title>
+  <link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+</head>
+<body>
+
+  <div id="tt">0</div>
+
+  <header>
+		<div class="trigger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<h1><a href="#none"><img src="image/footer_logo.png" alt="logo"></a></h1>
+
+		<ul class="gnb_list">
+			<li class="main"><a href="#">wedding &amp; party</a>
+				<ul class="sub">
+					<li><a href="#">라움웨딩안내</a></li>
+					<li><a href="#">라움파티안내</a></li>
+				</ul>
+			</li>
+			<li class="main"><a href="#">business</a>
+				<ul class="sub">
+					<li><a href="#">비지니스안내</a></li>
+					<li><a href="#">층별안내</a></li>
+				</ul>
+			</li>
+			<li class="main"><a href="#">gallery</a>
+				<ul class="sub">
+					<li><a href="#">갤러리</a></li>
+					<li><a href="#">뉴스레터</a></li>
+				</ul>
+			</li>
+			<li class="main"><a href="#">art &amp; culture</a>
+				<ul class="sub">
+					<li><a href="#">공연예매</a></li>
+					<li><a href="#">문의</a></li>
+				</ul>
+			</li>
+		</ul>
+	</header>
+
+  <div id="container">
+    <section id="wedding" class="area">
+      <div class="inner">
+        <div class="wedding_contents">
+          <h1>the first social venue, <span>raum</span></h1>
+  				<p>관계의 문화가 이루어지는 공간<br>소셜베뉴 라움</p>
+					<button><a href="">more</a></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="area">
+      <div class="inner">
+        <div class="gallery_contents">
+          <h1>we tailor your<br>wedding &amp; party</h1>
+          <p>어디에서도 경험할 수 없는 단 하나의<br>웨딩 &amp; 파티</p>
+					<button><a href="">more</a></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="business" class="area">
+      <div class="inner">
+        <div class="business_contents">
+        	<h1>for your successful<br>business events</h1>
+	        <p>성공적인 비지니스를 위한<br> 소셜베뉴 라움</p>
+					<button><a href="">more</a></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="culture" class="area">
+      <div class="inner">
+        <div class="culture_contents">
+        	<h1>raum<br>art &amp culture</h1>
+	        <p>문화예술을 경험하는 가장 특별한 공간</p>
+					<button><a href="">more</a></button>
+
+					<div class="myslider">
+						<div>
+							<img src="image/culture_slider1.jpg" alt="slide1">
+							<span>공간연출과정 | 웨딩파티</span>
+						</div>
+						<div>
+							<img src="image/culture_slider2.jpg" alt="slide2">
+							<span>전문가과정 | 취업 &amp; 창업</span>
+						</div>
+						<div>
+							<img src="image/culture_slider3.jpg" alt="slide3">
+							<span>입문자 취미과정 | 초 &amp; 중급</span>
+						</div>
+						<div>
+							<img src="image/culture_slider4.jpg" alt="slide4">
+							<span>원데이클래스</span>
+						</div>
+					</div>
+					
+	      </div>
+				
+        </div>
+    </section>
+
+    <section id="footer" class="area">
+			<div class="quick_share">
+				<p><img src="image/footer_logo.png" alt="FOOTER ROGO"></p>
+				<ul>
+					<li><img src="image/icon_instagram.png" alt="instagram"></li>
+					<li><img src="image/ft_icon_youtube.png" alt="youtube"></li>
+					<li><img src="image/ft_icon_facebook.png" alt="facebook"></li>
+					<li><img src="image/ft_icon_blog.png" alt="blog"></li>
+				</ul>
+			</div>
+			<div class="quick_link">
+				<ul>
+					<li class="tel">
+						<img src="image/ft_icon_tel.png" alt="tel"><a href="tel:01075713693">tel</a>
+					</li>
+					<li class="location">
+						<img src="image/ft_icon_location.png" alt="location"><a href="">location</a>
+					</li>
+					<li class="contact">
+						<img src="image/ft_icon_contact.png" alt="contact"><a href="">contact us</a>
+					</li>
+				</ul>
+			</div>
+			<footer>
+				<p class="copyright">라움. <span>all rights reserved</span> designed &amp; managed by <b>wisa</b></p>    
+			</footer>
+		</section>
+
+  </div>
+
+
+<!-- Script Source -->
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/index.js"></script>
+
+<script type="text/javascript" src="slick/slick.js"></script>
+<script>
+$('.myslider').slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 2
+});
+</script>
+
+</body>
+</html>
