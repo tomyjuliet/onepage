@@ -1,0 +1,553 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{box-sizing: border-box;}
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #121212;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+/*header*/
+
+header{
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.9);
+  position:fixed;
+	z-index:1000;
+}
+header h1{
+	text-align: center;
+}   
+header h1 img{
+	width:140px;
+	margin-top: 15px;
+	margin-right: 17px;
+} 
+
+/* Trigger*/
+.trigger {
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+.trigger span{
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+	border-radius: 35px;
+  transition: 0.3s;
+}
+.trigger span:nth-child(1){top: 0;}
+.trigger span:nth-child(2){top: 50%;}
+.trigger span:nth-child(3){top: 100%;}
+
+/* jQuery 에서 trigger클릭시 바뀌는 부분 */
+.trigger.active span:nth-child(1){top: 50%;transform: rotate(45deg);}
+.trigger.active span:nth-child(2){opacity: 0;}
+.trigger.active span:nth-child(3){top: 50%;transform: rotate(-45deg);}
+
+
+/* Menu*/
+.gnb_list{display: none;}
+.gnb_list{	
+	position:absolute;
+	top:100%;
+	width:100%;
+  height: 100vh;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.gnb_list .main:first-child{border-top:2px solid #faebcd;}
+.gnb_list .main{
+  padding: 15px 0;
+  border-bottom:1px solid #e8e8e8;
+}
+.gnb_list .main a{
+	display:block; 
+	font-size:16px; 
+	font-size:1rem; 
+	color:#fff; 
+	text-transform:uppercase;
+	text-align:center;
+	letter-spacing: 1px;
+}
+.gnb_list>.main>a:after { 
+  content: "\f107";
+  font-family: fontawesome;
+  float: right;
+	color: #fff;
+	position: absolute;
+	right: 40px;
+}
+.gnb_list>.main>a.uparrow:after {  
+  content: "\f106";
+  font-family: fontawesome;
+  float: right;
+	color: #fff;
+	position: absolute;
+}
+
+.sub{display: none;}
+.sub>li{
+	height: 40px;
+}
+.sub>li>a{
+	display: block;
+	padding: 20px;
+	font-size: 14px;
+}
+.gnb_list .main a:hover{color:#faebcd}
+
+
+
+/* Main */
+#main{
+  width: 100%;
+  max-width: 100%;
+  padding-top: 60px;
+}
+.art_culture_visual{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  background: url(../image/bg_art_culture.jpg) no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
+.art_culture_text{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.art_culture_text h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #faebcd;
+  text-transform: uppercase;
+}
+.art_culture_text h2{
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  font-size:30px;
+	font-size:1.875rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+section{
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* TabMenu */
+.btn{display: flex;}
+.btn li{
+  flex: 1;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  color: #333;
+  padding: 10px;
+  font-size: 16px;
+  font-size: 1.000rem;
+  text-align: center;
+  cursor: pointer;
+}
+.btn li:last-child {
+  border-right: none;
+}
+.btn li:hover,
+.btn li.active{
+  background-color: #faebcd;
+}
+
+
+/* TabContent */
+.tabContents{
+  box-sizing: border-box;
+  text-align: center;
+}
+.tabContents .res>h3{
+  font-family: 'Montserrat', sans-serif;
+  color: #faebcd;
+  padding-top:50px;
+  font-size: 30px;
+  font-size: 1.875rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.tabContents .res>h2{
+  font-size: 20px;
+  font-size: 1.250rem;
+  color: #fff;
+  font-weight: 400;
+  padding-bottom: 40px;
+}
+.tabContents .res{display: none;}
+.tabContents .res.active{display: block;}
+
+
+
+/* Tabmenu */
+#tabmenu{
+	width: 100%;
+  max-width: 100%;
+  text-align:center;
+  background-color: #121212;
+}
+.tab{
+	display: flex;
+	justify-content: center;
+  padding-bottom: 30px;
+}
+.tab li{
+	width:110px;
+	height:40px;
+  border:1px solid #d3bca1;
+	font-size:13px;
+  font-size: 0.813rem;
+	color:#faebcd;
+	font-weight:400;
+  text-align:center;
+  line-height:40px;	
+  text-transform: capitalize;
+	cursor: pointer;
+}
+.tab li.active{ 
+	background:#faebcd;
+	color:#333;
+	border:1px solid #928676;
+	font-weight:500;
+}
+
+
+/* TabContent */
+.tabContents .res{
+  background-color: #121212;
+  padding: 15px;
+  box-sizing: border-box;
+
+}
+
+.tabContents .head{display: none;}
+.tabContents .head.active{display: block;}
+
+
+.tabContents .res_con{margin-bottom: 50px;}
+.tabContents .res img{
+  width: 90%;
+  max-width: 90%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.tabContents .res_text{
+  width: 90%;
+  background: #222;
+  padding: 20px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+.tabContents .res_text h4{
+	font-size:20px;
+  font-size: 1.250rem;
+  font-weight: 500;
+  text-transform: capitalize;
+	color:#fff;
+	font-weight:400;
+}
+.tabContents .res_text h3{
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+}
+.tabContents .res_text h2{
+  padding-top:20px;
+  font-size: 16px;
+  font-size: 1.000rem;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+}
+.tabContents .res_text p{
+  padding-top: 20px;
+  font-size: 16px;
+  font-size: 1.000rem;
+  font-weight: 200;
+  color: #fff;
+}
+.tabContents .res_text p span{
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.tabContents .res_text button{
+  border-style: none;
+  text-align: center;
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: #746045;
+  color: #fff;
+  font-size: 14px;
+  font-size: 0.875rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.tabContents .res_text button:hover{
+  background-color: #faebcd;
+  color: #333;
+}
+.btn_old{
+  background-color: #ccc !important;
+  color: #333 !important;
+}
+.btn_old:hover{
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+
+
+
+/* Modal with target selector */
+.modal {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 9999;
+}
+.modal.active {
+  display: block;
+  z-index: 9999;
+}
+.modal-content {
+  background-color: #222;
+  width: 95%;
+  height: 95vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  animation: slidefade 0.35s linear;
+  z-index: 9999;
+
+}
+.modal-content caption{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #faebcd;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+.modal-content img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+.btn_t {
+  background-color: #3a2804;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+.btn-close {
+  color: #ccc;
+  font-size: 24px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+@keyframes slidefade {
+  0% {
+    opacity: 0;
+    margin-top: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+table{
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+tr td:nth-child(1){
+  color: #333;
+}
+td{
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #d3bca1;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.line3{border-bottom: none;}
+
+.line1{
+  color: #77450d !important;
+  border-bottom: 1px solid #746045;
+  font-size: 18px;
+  font-weight: 500;
+  border-right: 1px solid #746045;
+  background-color: #faebcd;
+  padding: 10px;
+}
+.line1:nth-child(2){
+  border-right: none;
+  background-color: #fff;
+}
+.line2{
+  color: #77450d !important;
+  font-size: 18px;
+  font-weight: 500;
+  border-right: 1px solid #746045;
+  background-color: #faebcd;
+}
+td b{
+  font-size: 13px;
+  font-weight: 400;
+  color: #746045;
+}
+
+
+#footer{
+  text-align: center;
+  margin-top: 50px;
+}
+/* -------- Quick -------- */
+.quick_share{
+  width: 100%;
+  background-color: #27272e;
+}
+.quick_share p{
+  border-bottom: 1px solid #666;
+}
+.quick_share p img{
+  width: 120px;
+  padding: 5px 0 10px 0;
+}
+.quick_share ul{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 5px;
+  margin-top: 10px;
+  align-items: center;
+}
+.quick_share ul li{
+  border: 1px solid #666;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.quick_share ul img{
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+}
+.quick_share ul li:hover{
+  border: 1px solid #fff;
+}
+.quick_link{
+  width: 100%;
+  padding-top: 10px;
+  background-color: #27272e;
+}
+.quick_link ul{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+}
+.quick_link ul li{
+  flex: 1;
+  line-height: 50px;
+  border: 1px solid #666;
+}
+.quick_link ul li:nth-child(2){border-left: none;}
+.quick_link ul li:nth-child(2),
+.quick_link ul li:nth-child(3){border-right: none;}
+
+.quick_link ul li img{
+  margin-top: 10px;
+  cursor: pointer;
+}
+.quick_link ul li a{
+  color: #ccc;
+  text-transform: uppercase;
+  padding-left: 10px;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.quick_link ul li:hover{
+  border: 1px solid #fff;
+}
+.quick_link ul li:hover a{
+  color: #fff;
+}
+
+/* -------- footer -------- */
+footer{
+	width:100%;
+	padding-top: 10px;
+	background:#27272e;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+footer img{width:120px;}
+footer .copyright{
+  font-family: 'Noto Sans', sans-serif;
+	padding:15px 0;
+	font-size:14px; 
+	font-size:0.875rem;
+  font-weight: 300; 
+	color:#e8e8e8;
+}
+footer .copyright span{
+  text-transform: capitalize;
+}
+footer .copyright b{
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
